@@ -1,0 +1,492 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{870B2984-5B32-40EE-80BA-9EC5AD1BE032}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Apartment.com.My.MyApplication</StartupObject>
+    <RootNamespace>Apartment.com</RootNamespace>
+    <AssemblyName>Apartment.com</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Apartment.com.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Apartment.com.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>lion-715852_960_720 %282%29.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ApartmentUpdate">
+      <HintPath>..\..\ApartmentUpdate\ApartmentUpdate\bin\Debug\ApartmentUpdate.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\..\..\Downloads\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Darwaiting.Designer.vb">
+      <DependentUpon>Darwaiting.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Darwaiting.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindReserve.Designer.vb">
+      <DependentUpon>FindReserve.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FindReserve.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindRoom.Designer.vb">
+      <DependentUpon>FindRoom.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FindRoom.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InfoAboutDevelop.Designer.vb">
+      <DependentUpon>InfoAboutDevelop.vb</DependentUpon>
+    </Compile>
+    <Compile Include="InfoAboutDevelop.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="isOpenform.vb" />
+    <Compile Include="MainActivity.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainActivity.Designer.vb">
+      <DependentUpon>MainActivity.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MngAdmin.Designer.vb">
+      <DependentUpon>MngAdmin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MngAdmin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MngAdvice.Designer.vb">
+      <DependentUpon>MngAdvice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MngAdvice.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MngBuilding.Designer.vb">
+      <DependentUpon>MngBuilding.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MngBuilding.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MngBuypackget.Designer.vb">
+      <DependentUpon>MngBuypackget.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MngBuypackget.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MngCancelpromise.Designer.vb">
+      <DependentUpon>MngCancelpromise.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MngCancelpromise.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MngCustomer.Designer.vb">
+      <DependentUpon>MngCustomer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MngCustomer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MngInvoice.Designer.vb">
+      <DependentUpon>MngInvoice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MngInvoice.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MngLogin.Designer.vb">
+      <DependentUpon>MngLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MngLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MngMoveout.Designer.vb">
+      <DependentUpon>MngMoveout.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MngMoveout.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MngPackget.Designer.vb">
+      <DependentUpon>MngPackget.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MngPackget.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MngPrefix.Designer.vb">
+      <DependentUpon>MngPrefix.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MngPrefix.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MngPromise.Designer.vb">
+      <DependentUpon>MngPromise.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MngPromise.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MngRealinvoice.Designer.vb">
+      <DependentUpon>MngRealinvoice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MngRealinvoice.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MngRepair.Designer.vb">
+      <DependentUpon>MngRepair.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MngRepair.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MngReserve.Designer.vb">
+      <DependentUpon>MngReserve.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MngReserve.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MngRoom.Designer.vb">
+      <DependentUpon>MngRoom.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MngRoom.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MngScopeAdvice.Designer.vb">
+      <DependentUpon>MngScopeAdvice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MngScopeAdvice.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MngTyperoom.Designer.vb">
+      <DependentUpon>MngTyperoom.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MngTyperoom.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Tasks.Designer.vb">
+      <DependentUpon>Tasks.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tasks.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="useFunctional.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Darwaiting.resx">
+      <DependentUpon>Darwaiting.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindReserve.resx">
+      <DependentUpon>FindReserve.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindRoom.resx">
+      <DependentUpon>FindRoom.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfoAboutDevelop.resx">
+      <DependentUpon>InfoAboutDevelop.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainActivity.resx">
+      <DependentUpon>MainActivity.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MngAdmin.resx">
+      <DependentUpon>MngAdmin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MngAdvice.resx">
+      <DependentUpon>MngAdvice.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MngBuilding.resx">
+      <DependentUpon>MngBuilding.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MngBuypackget.resx">
+      <DependentUpon>MngBuypackget.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MngCancelpromise.resx">
+      <DependentUpon>MngCancelpromise.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MngCustomer.resx">
+      <DependentUpon>MngCustomer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MngInvoice.resx">
+      <DependentUpon>MngInvoice.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MngLogin.resx">
+      <DependentUpon>MngLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MngMoveout.resx">
+      <DependentUpon>MngMoveout.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MngPackget.resx">
+      <DependentUpon>MngPackget.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MngPrefix.resx">
+      <DependentUpon>MngPrefix.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MngPromise.resx">
+      <DependentUpon>MngPromise.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MngRealinvoice.resx">
+      <DependentUpon>MngRealinvoice.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MngRepair.resx">
+      <DependentUpon>MngRepair.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MngReserve.resx">
+      <DependentUpon>MngReserve.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MngRoom.resx">
+      <DependentUpon>MngRoom.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MngScopeAdvice.resx">
+      <DependentUpon>MngScopeAdvice.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MngTyperoom.resx">
+      <DependentUpon>MngTyperoom.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tasks.resx">
+      <DependentUpon>Tasks.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\power-button-off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apartment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alert.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-comments-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exclamation-alert.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imglogout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\note.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\move.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\typeroom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\คำนำหน้า.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cashier.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\invoice.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\booking.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bitcoin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img#settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paintbrush.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\soccer-ball.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notification.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-contacts[1].png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new-user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new-user1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\house.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\three-circling-arrows.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new-user48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clear48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\correct48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hostel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\auction.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove-symbol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lion-715852_960_720.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loading.gif" />
+    <Content Include="lion-715852_960_720 %282%29.ico" />
+    <Content Include="Resources\remove.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
