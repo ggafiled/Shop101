@@ -37,7 +37,7 @@ Partial Class Darwaiting
         'PictureBox1
         '
         Me.PictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.PictureBox1.Image = Global.Apartment.com.My.Resources.Resources.loading
+        Me.PictureBox1.Image = Global.ggafiled.com.My.Resources.Resources.loading
         Me.PictureBox1.Location = New System.Drawing.Point(37, 26)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(40, 36)

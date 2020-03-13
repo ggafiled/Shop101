@@ -31,11 +31,4 @@
         Me.BackColor = Color.FromArgb(241, 244, 253)
     End Sub
 
-    Private Sub Tasks_Click(sender As Object, e As EventArgs) Handles Me.Click, SeparatorMain.Click, SeparatorSplit.Click, Subdetail.Click, Subhead.Click, Subtitle.Click, PictureStatus.Click
-        If Type = item.reserve Then
-            new_mngpromise = New MngPromise
-            new_mngpromise.Show()
-            isOpenform.mngpromise = True
-        End If
-    End Sub
 End Class

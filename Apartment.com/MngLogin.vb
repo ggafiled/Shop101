@@ -1,47 +1,11 @@
-﻿Imports System.Reflection
-Imports System.Text
+﻿Imports System.ComponentModel
+Imports System.Reflection
+Imports System.Xml
 Imports ApartmentUpdate
-
-Public Class MngLogin : Implements IApartmentUpdate
+Public Class MngLogin
     Dim _frmmain As MainActivity
     Dim _frmwaiting As Darwaiting
     Dim dtlogin As New DataTable
-
-    Public ReadOnly Property Applicationname As String Implements IApartmentUpdate.Applicationname
-        Get
-            Return "Apartment.com"
-        End Get
-    End Property
-
-    Public ReadOnly Property ApplicationID As String Implements IApartmentUpdate.ApplicationID
-        Get
-            Return "Apartment.com"
-        End Get
-    End Property
-
-    Public ReadOnly Property ApplicationAssemby As Assembly Implements IApartmentUpdate.ApplicationAssemby
-        Get
-            Return Assembly.GetExecutingAssembly
-        End Get
-    End Property
-
-    Public ReadOnly Property ApplicationIcon As Icon Implements IApartmentUpdate.ApplicationIcon
-        Get
-            Return Me.Icon
-        End Get
-    End Property
-
-    Public ReadOnly Property XmlFileLocation As Uri Implements IApartmentUpdate.XmlFileLocation
-        Get
-            Return New Uri("https://github.com/ggafiled/tryz/blob/master/update.xml")
-        End Get
-    End Property
-
-    Public ReadOnly Property Context As Form Implements IApartmentUpdate.Context
-        Get
-            Return Me
-        End Get
-    End Property
 
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles imgExit.Click
         Application.Exit()
@@ -73,7 +37,7 @@ Public Class MngLogin : Implements IApartmentUpdate
             bgworker.ReportProgress(99)
         End Try
         Try
-            dtlogin = QueryReturnDatatable("SELECT * FROM userauthen WHERE user_name = " + "'" + txtUser.text + "'" + " and user_password =" + "'" + txtPwd.text + "'")
+            dtlogin = QueryReturnDatatable("SELECT * FROM tbl_userauthen WHERE user_name = " + "'" + txtUser.text + "'" + " and user_password =" + "'" + txtPwd.text + "'")
             If dtlogin.Rows.Count > 0 Then
                 bgworker.ReportProgress(10)
             Else
@@ -86,7 +50,6 @@ Public Class MngLogin : Implements IApartmentUpdate
     Private Sub bgworker_ProgressChanged(sender As Object, e As System.ComponentModel.ProgressChangedEventArgs) Handles bgworker.ProgressChanged
         If e.ProgressPercentage = 10 Then
             My.Settings.Username = dtlogin(0)(0).ToString
-            My.Settings.Grant = dtlogin(0)(2).ToString
             dtlogin.Clear()
             Me.Hide()
             _frmwaiting.Dispose()
@@ -102,11 +65,14 @@ Public Class MngLogin : Implements IApartmentUpdate
     End Sub
 
     Private Sub MngLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        lbNewVersion.Text = My.Application.Info.Version.ToString
         txtUser.text = ""
         txtPwd.text = ""
         txtUser.Focus()
         txtPwd._TextBox.PasswordChar = "*"
         txtUser._TextBox.Multiline = False
         txtPwd._TextBox.Multiline = False
+        'check = New ApartmentUpdater(Me)
+        'check.DoUpdate(url)
     End Sub
 End Class

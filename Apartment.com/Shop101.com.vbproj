@@ -1,0 +1,471 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{870B2984-5B32-40EE-80BA-9EC5AD1BE032}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>ggafiled.com.My.MyApplication</StartupObject>
+    <RootNamespace>ggafiled.com</RootNamespace>
+    <AssemblyName>ggafiled.com</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>2561</ApplicationRevision>
+    <ApplicationVersion>2.0.1.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>ggafiled.com.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>ggafiled.com.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>store.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ApartmentUpdate, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ApartmentUpdate\ApartmentUpdate\bin\Release\ApartmentUpdate.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\..\..\Downloads\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.10.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Downloads\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="PictureBoxAbouAmmar">
+      <HintPath>..\..\..\..\Downloads\PictureBoxAbouAmmar.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChooseEvenCatagoryArgs.vb" />
+    <Compile Include="Darwaiting.Designer.vb">
+      <DependentUpon>Darwaiting.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Darwaiting.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindProduct.Designer.vb">
+      <DependentUpon>FindProduct.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FindProduct.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InfoAboutDevelop.Designer.vb">
+      <DependentUpon>InfoAboutDevelop.vb</DependentUpon>
+    </Compile>
+    <Compile Include="InfoAboutDevelop.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="isOpenform.vb" />
+    <Compile Include="MainActivity.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainActivity.Designer.vb">
+      <DependentUpon>MainActivity.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MngOrder.Designer.vb">
+      <DependentUpon>MngOrder.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MngOrder.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MngProduct.Designer.vb">
+      <DependentUpon>MngProduct.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MngProduct.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MngCustomer.Designer.vb">
+      <DependentUpon>MngCustomer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MngCustomer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MngLogin.Designer.vb">
+      <DependentUpon>MngLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MngLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MngSaleProduct.Designer.vb">
+      <DependentUpon>MngSaleProduct.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MngSaleProduct.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MngCategory.Designer.vb">
+      <DependentUpon>MngCategory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MngCategory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ReportSaleProduct.Designer.vb">
+      <DependentUpon>ReportSaleProduct.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportSaleProduct.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tasks.Designer.vb">
+      <DependentUpon>Tasks.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tasks.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="useFunctional.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Darwaiting.resx">
+      <DependentUpon>Darwaiting.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindProduct.resx">
+      <DependentUpon>FindProduct.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfoAboutDevelop.resx">
+      <DependentUpon>InfoAboutDevelop.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainActivity.resx">
+      <DependentUpon>MainActivity.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MngOrder.resx">
+      <DependentUpon>MngOrder.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MngProduct.resx">
+      <DependentUpon>MngProduct.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MngCustomer.resx">
+      <DependentUpon>MngCustomer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MngLogin.resx">
+      <DependentUpon>MngLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MngSaleProduct.resx">
+      <DependentUpon>MngSaleProduct.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MngCategory.resx">
+      <DependentUpon>MngCategory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportSaleProduct.resx">
+      <DependentUpon>ReportSaleProduct.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tasks.resx">
+      <DependentUpon>Tasks.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_ReportSaleProduct.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\power-button-off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apartment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alert.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-comments-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exclamation-alert.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imglogout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\note.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\move.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\typeroom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\คำนำหน้า.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cashier.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\invoice.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\booking.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bitcoin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img#settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paintbrush.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\soccer-ball.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notification.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-contacts[1].png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new-user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new-user1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\house.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\three-circling-arrows.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new-user48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clear48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\correct48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hostel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\auction.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove-symbol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lion-715852_960_7201.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\list.png" />
+    <None Include="Resources\list %281%29.png" />
+    <None Include="Resources\list %282%29.png" />
+    <None Include="Resources\invoice1.png" />
+    <None Include="Resources\barcode.png" />
+    <None Include="Resources\cola.png" />
+    <None Include="Resources\care-about-air.png" />
+    <None Include="Resources\magnifying-glass %281%29.png" />
+    <Content Include="SqlServerTypes\Loader.cs" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="store.ico" />
+    <None Include="Resources\store.png" />
+    <None Include="Resources\loading.gif" />
+    <None Include="Resources\man %281%29.png" />
+    <None Include="Resources\power-button-off1.png" />
+    <None Include="Resources\cloud-sync.png" />
+    <None Include="Resources\information.png" />
+    <None Include="Resources\previous.png" />
+    <Content Include="Resources\remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

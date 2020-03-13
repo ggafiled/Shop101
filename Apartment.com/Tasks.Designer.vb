@@ -59,36 +59,36 @@ Partial Class Tasks
         'Subtitle
         '
         Me.Subtitle.AutoSize = True
-        Me.Subtitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Subtitle.Font = New System.Drawing.Font("TH SarabunPSK", 14.0!)
         Me.Subtitle.Location = New System.Drawing.Point(17, 6)
         Me.Subtitle.Name = "Subtitle"
-        Me.Subtitle.Size = New System.Drawing.Size(55, 17)
+        Me.Subtitle.Size = New System.Drawing.Size(56, 22)
         Me.Subtitle.TabIndex = 3
         Me.Subtitle.Text = "Subtitle"
         '
         'Subdetail
         '
         Me.Subdetail.AutoSize = True
-        Me.Subdetail.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Subdetail.Font = New System.Drawing.Font("TH SarabunPSK", 14.0!)
         Me.Subdetail.Location = New System.Drawing.Point(17, 60)
         Me.Subdetail.Name = "Subdetail"
-        Me.Subdetail.Size = New System.Drawing.Size(67, 17)
+        Me.Subdetail.Size = New System.Drawing.Size(66, 22)
         Me.Subdetail.TabIndex = 4
         Me.Subdetail.Text = "Subdetail"
         '
         'Subhead
         '
         Me.Subhead.AutoSize = True
-        Me.Subhead.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Subhead.Font = New System.Drawing.Font("TH SarabunPSK", 18.0!)
         Me.Subhead.Location = New System.Drawing.Point(54, 30)
         Me.Subhead.Name = "Subhead"
-        Me.Subhead.Size = New System.Drawing.Size(87, 24)
+        Me.Subhead.Size = New System.Drawing.Size(75, 27)
         Me.Subhead.TabIndex = 5
         Me.Subhead.Text = "Subhead"
         '
         'PictureStatus
         '
-        Me.PictureStatus.Image = Global.Apartment.com.My.Resources.Resources.notification
+        Me.PictureStatus.Image = Global.ggafiled.com.My.Resources.Resources.notification
         Me.PictureStatus.Location = New System.Drawing.Point(20, 29)
         Me.PictureStatus.Name = "PictureStatus"
         Me.PictureStatus.Size = New System.Drawing.Size(28, 28)

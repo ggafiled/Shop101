@@ -77,6 +77,16 @@ Namespace My
                 Me("Grant") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("server=localhost;user id=root;database=db_workshop_101")>  _
+        Public ReadOnly Property db_workshop_101ConnectionString() As String
+            Get
+                Return CType(Me("db_workshop_101ConnectionString"),String)
+            End Get
+        End Property
     End Class
 End Namespace
 
@@ -88,9 +98,9 @@ Namespace My
     Friend Module MySettingsProperty
         
         <Global.System.ComponentModel.Design.HelpKeywordAttribute("My.Settings")>  _
-        Friend ReadOnly Property Settings() As Global.Apartment.com.My.MySettings
+        Friend ReadOnly Property Settings() As Global.ggafiled.com.My.MySettings
             Get
-                Return Global.Apartment.com.My.MySettings.Default
+                Return Global.ggafiled.com.My.MySettings.Default
             End Get
         End Property
     End Module

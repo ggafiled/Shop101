@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class MngLogin
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,19 +20,20 @@ Partial Class MngLogin
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MngLogin))
         Me.BunifuElipse1 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.BunifuElipse2 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.bgworker = New System.ComponentModel.BackgroundWorker()
-        Me.lbapartmentname = New System.Windows.Forms.Label()
+        Me.lbggafiledname = New System.Windows.Forms.Label()
+        Me.lbNewVersion = New System.Windows.Forms.Label()
+        Me.txtUser = New Bunifu.Framework.UI.BunifuTextbox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.txtPwd = New Bunifu.Framework.UI.BunifuTextbox()
         Me.btnLogin = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.imgExit = New System.Windows.Forms.PictureBox()
-        Me.txtUser = New Bunifu.Framework.UI.BunifuTextbox()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.imgExit, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -51,21 +52,49 @@ Partial Class MngLogin
         '
         Me.bgworker.WorkerReportsProgress = True
         '
-        'lbapartmentname
+        'lbggafiledname
         '
-        Me.lbapartmentname.AutoSize = True
-        Me.lbapartmentname.Font = New System.Drawing.Font("Cordia New", 26.0!)
-        Me.lbapartmentname.ForeColor = System.Drawing.Color.Black
-        Me.lbapartmentname.Location = New System.Drawing.Point(86, 155)
-        Me.lbapartmentname.Name = "lbapartmentname"
-        Me.lbapartmentname.Size = New System.Drawing.Size(177, 48)
-        Me.lbapartmentname.TabIndex = 11
-        Me.lbapartmentname.Text = "Apartment.com"
-        Me.lbapartmentname.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lbggafiledname.AutoSize = True
+        Me.lbggafiledname.Font = New System.Drawing.Font("TH SarabunPSK", 26.0!)
+        Me.lbggafiledname.ForeColor = System.Drawing.Color.Black
+        Me.lbggafiledname.Location = New System.Drawing.Point(99, 160)
+        Me.lbggafiledname.Name = "lbggafiledname"
+        Me.lbggafiledname.Size = New System.Drawing.Size(165, 39)
+        Me.lbggafiledname.TabIndex = 11
+        Me.lbggafiledname.Text = "ร้านกระยาสารท"
+        Me.lbggafiledname.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lbNewVersion
+        '
+        Me.lbNewVersion.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.lbNewVersion.ForeColor = System.Drawing.Color.Black
+        Me.lbNewVersion.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.lbNewVersion.Location = New System.Drawing.Point(224, 368)
+        Me.lbNewVersion.Name = "lbNewVersion"
+        Me.lbNewVersion.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.lbNewVersion.Size = New System.Drawing.Size(112, 22)
+        Me.lbNewVersion.TabIndex = 13
+        Me.lbNewVersion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'txtUser
+        '
+        Me.txtUser.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(245, Byte), Integer), CType(CType(254, Byte), Integer))
+        Me.txtUser.BackgroundImage = CType(resources.GetObject("txtUser.BackgroundImage"), System.Drawing.Image)
+        Me.txtUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.txtUser.Font = New System.Drawing.Font("TH SarabunPSK", 8.25!)
+        Me.txtUser.ForeColor = System.Drawing.SystemColors.Highlight
+        Me.txtUser.Icon = CType(resources.GetObject("txtUser.Icon"), System.Drawing.Image)
+        Me.txtUser.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.txtUser.Location = New System.Drawing.Point(51, 207)
+        Me.txtUser.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.txtUser.Name = "txtUser"
+        Me.txtUser.Size = New System.Drawing.Size(250, 43)
+        Me.txtUser.TabIndex = 1
+        Me.txtUser.text = ""
         '
         'PictureBox2
         '
-        Me.PictureBox2.Image = Global.Apartment.com.My.Resources.Resources.lion_715852_960_720
+        Me.PictureBox2.Image = Global.ggafiled.com.My.Resources.Resources.store
         Me.PictureBox2.Location = New System.Drawing.Point(106, 40)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(146, 112)
@@ -78,10 +107,12 @@ Partial Class MngLogin
         Me.txtPwd.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(245, Byte), Integer), CType(CType(254, Byte), Integer))
         Me.txtPwd.BackgroundImage = CType(resources.GetObject("txtPwd.BackgroundImage"), System.Drawing.Image)
         Me.txtPwd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.txtPwd.Font = New System.Drawing.Font("TH SarabunPSK", 8.25!)
         Me.txtPwd.ForeColor = System.Drawing.SystemColors.Highlight
         Me.txtPwd.Icon = CType(resources.GetObject("txtPwd.Icon"), System.Drawing.Image)
         Me.txtPwd.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.txtPwd.Location = New System.Drawing.Point(51, 256)
+        Me.txtPwd.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.txtPwd.Name = "txtPwd"
         Me.txtPwd.Size = New System.Drawing.Size(250, 43)
         Me.txtPwd.TabIndex = 2
@@ -125,7 +156,7 @@ Partial Class MngLogin
         'imgExit
         '
         Me.imgExit.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.imgExit.Image = Global.Apartment.com.My.Resources.Resources.remove_symbol
+        Me.imgExit.Image = Global.ggafiled.com.My.Resources.Resources.remove_symbol
         Me.imgExit.Location = New System.Drawing.Point(306, 11)
         Me.imgExit.Name = "imgExit"
         Me.imgExit.Size = New System.Drawing.Size(28, 27)
@@ -133,28 +164,15 @@ Partial Class MngLogin
         Me.imgExit.TabIndex = 6
         Me.imgExit.TabStop = False
         '
-        'txtUser
-        '
-        Me.txtUser.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(245, Byte), Integer), CType(CType(254, Byte), Integer))
-        Me.txtUser.BackgroundImage = CType(resources.GetObject("txtUser.BackgroundImage"), System.Drawing.Image)
-        Me.txtUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.txtUser.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.txtUser.Icon = CType(resources.GetObject("txtUser.Icon"), System.Drawing.Image)
-        Me.txtUser.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.txtUser.Location = New System.Drawing.Point(51, 207)
-        Me.txtUser.Name = "txtUser"
-        Me.txtUser.Size = New System.Drawing.Size(250, 43)
-        Me.txtUser.TabIndex = 1
-        Me.txtUser.text = ""
-        '
         'MngLogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(245, Byte), Integer), CType(CType(254, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(346, 394)
+        Me.Controls.Add(Me.lbNewVersion)
         Me.Controls.Add(Me.txtUser)
-        Me.Controls.Add(Me.lbapartmentname)
+        Me.Controls.Add(Me.lbggafiledname)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.txtPwd)
         Me.Controls.Add(Me.btnLogin)
@@ -173,7 +191,7 @@ Partial Class MngLogin
     End Sub
 
     Friend WithEvents BunifuElipse1 As Bunifu.Framework.UI.BunifuElipse
-    Friend WithEvents lbapartmentname As Label
+    Friend WithEvents lbggafiledname As Label
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents txtPwd As Bunifu.Framework.UI.BunifuTextbox
     Friend WithEvents btnLogin As Bunifu.Framework.UI.BunifuFlatButton
@@ -181,4 +199,5 @@ Partial Class MngLogin
     Friend WithEvents BunifuElipse2 As Bunifu.Framework.UI.BunifuElipse
     Friend WithEvents bgworker As System.ComponentModel.BackgroundWorker
     Friend WithEvents txtUser As Bunifu.Framework.UI.BunifuTextbox
+    Friend WithEvents lbNewVersion As Label
 End Class

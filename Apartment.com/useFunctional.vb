@@ -13,7 +13,7 @@ Module useFunctional
     End Function
 
     Public Function getconnecttion() As String
-        Return ConvertCommand("aG9zdD1sb2NhbGhvc3Q7dXNlcj1yb290O3Bhc3N3b3JkPTEyMzQ1Njc4O2RhdGFiYXNlPWRiYXBpd2F0")
+        Return ConvertCommand("aG9zdD1sb2NhbGhvc3Q7dXNlcj1yb290O3Bhc3N3b3JkPScnO2RhdGFiYXNlPWRiX3dvcmtzaG9wXzEwMTtjaGFyc2V0PXV0Zjg=")
     End Function
 
     Public Function QueryReturnDatatableOverride(ByRef sql As String) As DataTable
@@ -44,10 +44,30 @@ Module useFunctional
         Call Closeconnection()
     End Function
 
+    Public Function QueryReturnDatatable(ByRef cmd As MySqlCommand)
+        Call Isconnection()
+        cmd.Connection = conn
+        da = New MySqlDataAdapter
+        da.SelectCommand = cmd
+        dt = New DataTable
+        da.Fill(dt)
+        Return dt
+        dt.Clear()
+        Call Closeconnection()
+    End Function
+
     Public Sub QueryNonReturn(ByRef sql As String)
         Call Isconnection()
         cmd = New MySqlCommand
         cmd.CommandText = sql
+        cmd.Connection = conn
+        cmd.ExecuteNonQuery()
+        Call Closeconnection()
+    End Sub
+
+    Public Sub QueryNonReturn(ByRef sql As MySqlCommand)
+        Call Isconnection()
+        cmd = sql
         cmd.Connection = conn
         cmd.ExecuteNonQuery()
         Call Closeconnection()
@@ -68,10 +88,10 @@ Module useFunctional
         da.Fill(dt)
         If dt.Rows.Count > 0 Then
             id = CInt(dt(0)(0).substring(3)) + 1
-            genarator = maincode + id.ToString("0000")
+            genarator = maincode + id.ToString("00000000")
             Return genarator
         Else
-            genarator = maincode + "0001"
+            genarator = maincode + "00000001"
             Return genarator
         End If
         dt.Clear()
